@@ -1,0 +1,41 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	display: grid;
+	color: #484848;
+	font-size: 14px;
+	font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	grid-template-columns: 1fr;
+	grid-template-rows: 70px 1fr auto 60px;
+	grid-template-areas:
+	   "header"
+	   "container"
+	   "places"
+	   "footer";
+	min-height: 100vh;
+	max-height: 100%;
+}
+
+.container {
+	width: 1000px;
+	margin: 30px auto;
+	grid-area: container;
+}
+
+
+@media only screen and (max-width: 1025px) {
+	.container {
+		width: 700px;
+	}
+}
+
+
+@media only screen and (max-width: 750px) {
+	.container {
+		width: 90%;
+	}
+}
